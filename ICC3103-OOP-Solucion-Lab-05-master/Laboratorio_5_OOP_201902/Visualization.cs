@@ -76,5 +76,10 @@ namespace Laboratorio_5_OOP_201902
             Console.WriteLine(mesage);
             
         }
+        public static void ConsoleError(string mesage)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(mesage);
+        }
     }
 }
