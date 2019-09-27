@@ -81,5 +81,9 @@ namespace Laboratorio_5_OOP_201902
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(mesage);
         }
+        public static void ClearConsole()
+        {
+            Console.Clear();
+        }
     }
 }
