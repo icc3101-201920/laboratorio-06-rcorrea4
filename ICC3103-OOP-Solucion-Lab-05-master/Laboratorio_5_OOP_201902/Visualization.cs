@@ -64,9 +64,27 @@ namespace Laboratorio_5_OOP_201902
             int numero = Console.Read();
             if ( stoper == false)
             {
-                if (numero<=MaxInput && numero >= 0)
+                if (numero>MaxInput || numero < 0)
                 {
-                    Console.WriteLine(  "verificado Correctamente");
+                    Console.WriteLine(  "Error, ingrese un numero dentro del rango");
+                    numero = Console.Read();
+                }
+                else
+                {
+                    Console.WriteLine("Verificado correctamente");
+                }
+                
+            }
+            else
+            {
+                if (numero > MaxInput || numero < -1)
+                {
+                    Console.WriteLine("Error, ingrese un numero dentro del rango");
+                    numero = Console.Read();
+                }
+                else
+                {
+                    Console.WriteLine("Verificado correctamente");
                 }
             }
         }
@@ -84,6 +102,17 @@ namespace Laboratorio_5_OOP_201902
         public static void ClearConsole()
         {
             Console.Clear();
+        }
+        public static void ShowListOptions(List<string> options,string message=null)
+        {
+            if ( message != null)
+            {
+                Console.WriteLine(message);
+            }
+            foreach(string opt in options)
+            {
+                Console.WriteLine(opt);
+            }
         }
     }
 }
